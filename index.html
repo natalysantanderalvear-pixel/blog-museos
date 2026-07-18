@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Museos - Pedagogía Crítica 2026</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/botones.css">
+    <link rel="stylesheet" href="css/contenido.css">
+</head>
+<body>
+
+<header>
+    <h1>🎨 Una mirada pedagógica desde el Museo Interctivo de Ciencias</h1>
+    <p>🎨 Arte, Conocimento y Transformación · 2026</p>
+</header>
+
+<div class="container">
+    <!-- ===== PANTALLA DE INICIO ===== -->
+    <div id="homeScreen" class="home-screen">
+        <h2>✦ entra al conocimiento ✦</h2>
+        <button id="btnHoja" class="btn-hoja">
+            abrir<br>hoja
+        </button>
+        <p style="margin-top: 25px; color: #4d5f44; font-style: italic; background: #e8e0d0; padding: 8px 20px; border-radius: 40px; border: 1px solid #b8a48b;">
+            🌿 toca la hoja para desplegar
+        </p>
+    </div>
+
+    <!-- ===== SECCIÓN DE 3 BOTONES ===== -->
+    <div id="threeButtons" class="three-buttons">
+        <!-- BOTÓN 1: TEORÍA DE LA ACTIVIDAD -->
+        <button class="btn-tema btn-hilar" onclick="cargarSeccion('hilar')">
+            <span class="icono">🧵</span>
+            <span class="etiqueta">Teoría de la Actividad</span>
+            <span style="font-size:0.8rem; font-weight:400; color:#2d3e2a;">Leontiev · Mediación</span>
+        </button>
+
+        <!-- BOTÓN 2: PEDAGOGÍA CRÍTICA -->
+        <button class="btn-tema btn-planeta" onclick="cargarSeccion('planeta')">
+            <span class="icono">✊</span>
+            <span class="etiqueta">Pedagogía Crítica</span>
+            <span style="font-size:0.8rem; font-weight:400; color:#2d241c;">Freire · Makarenko</span>
+        </button>
+
+        <!-- BOTÓN 3: EPISTEMOLOGÍAS DEL SUR -->
+        <button class="btn-tema btn-papiro" onclick="cargarSeccion('papiro')">
+            <span class="icono">🌎</span>
+            <span class="etiqueta">Epistemologías del Sur</span>
+            <span style="font-size:0.8rem; font-weight:400; color:#3a3229;">Dussel · Boaventura</span>
+        </button>
+
+        <!-- BOTÓN VOLVER AL INICIO -->
+        <div class="volver-inicio-botones">
+            <button class="btn-volver-inicio" onclick="volverInicio()">
+                🏠 Volver al inicio
+            </button>
+        </div>
+    </div>
+
+    <!-- ===== CONTENEDOR DE SECCIONES ===== -->
+    <div id="contenedorSecciones"></div>
+</div>
+
+<!-- Botón flotante de volver (siempre visible cuando hay contenido) -->
+<button id="btnFlotanteVolver" class="btn-flotante-volver" onclick="volverInicio()" style="display:none;">
+    🏠
+</button>
+
+<footer>
+    <p>© 2026 · <span>Blog Museos - Pedagogía Crítica</span> · Hecho con 🌿 y ☕</p>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/main.js"></script>
+<script src="js/navegacion.js"></script>
+<script src="js/botones.js"></script>
+</body>
+</html>
