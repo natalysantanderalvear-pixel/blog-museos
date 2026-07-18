@@ -1,0 +1,139 @@
+/* ========================================
+   CONTENEDORES DE CONTENIDO
+   ======================================== */
+
+.contenido-seccion {
+    display: none;
+    margin: 30px 0;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    border-left: 8px solid #4b6e3f;
+}
+
+.contenido-seccion.activo {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.contenido-seccion h3 {
+    font-size: 2.2rem;
+    color: #2d4a33;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #b8a48b;
+    padding-bottom: 10px;
+}
+
+.contenido-seccion img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 15px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contenido-seccion p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #444;
+    margin: 15px 0;
+}
+
+.contenido-seccion .fecha {
+    color: #888;
+    font-size: 0.95rem;
+    margin-top: 15px;
+    display: block;
+}
+
+/* ========================================
+   BOTONES DENTRO DEL CONTENIDO
+   ======================================== */
+
+.contenido-seccion .botones-accion {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* ========================================
+   ESTILOS PARA BLOQUES DE CITAS Y LISTAS
+   ======================================== */
+
+.contenido-seccion h4 {
+    font-size: 1.3rem;
+    color: #3d5a43;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-left: 4px solid #b8a48b;
+    padding-left: 12px;
+}
+
+.contenido-seccion blockquote {
+    background: #f0ede4;
+    padding: 15px 25px;
+    border-radius: 12px;
+    border-left: 6px solid #4b6e3f;
+    font-style: italic;
+    color: #2d3e2a;
+    margin: 15px 0;
+    font-size: 1.05rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.contenido-seccion ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.contenido-seccion ul li {
+    padding: 8px 15px;
+    margin: 4px 0;
+    background: #f5f2ea;
+    border-radius: 8px;
+    border-left: 3px solid #7d9f7a;
+    font-size: 1.05rem;
+}
+
+.contenido-seccion ul li::before {
+    content: "✦ ";
+    color: #4b6e3f;
+    font-weight: bold;
+}
+
+.contenido-seccion strong {
+    color: #2d4a33;
+}
+
+.contenido-seccion em {
+    color: #5a3e1b;
+}
+
+/* ========================================
+   RESPONSIVE CONTENIDO
+   ======================================== */
+
+@media (max-width: 700px) {
+    .contenido-seccion h3 {
+        font-size: 1.6rem;
+    }
+    .contenido-seccion .botones-accion {
+        flex-direction: column;
+    }
+    .contenido-seccion blockquote {
+        padding: 12px 18px;
+        font-size: 0.95rem;
+    }
+    .contenido-seccion ul li {
+        font-size: 0.95rem;
+    }
+}

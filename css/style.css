@@ -1,0 +1,175 @@
+/* ========================================
+   ESTILOS GENERALES
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+header {
+    background: linear-gradient(135deg, #2e5f3e, #5a3e1b);
+    color: #f5f0e1;
+    padding: 40px 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-bottom: 3px solid #b8a48b;
+}
+
+header h1 {
+    font-size: 2.8em;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 #1f3a2a;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 1.3em;
+    color: #d4c9b5;
+}
+
+/* ========================================
+   CONTENEDOR PRINCIPAL
+   ======================================== */
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+/* ========================================
+   PANTALLA DE INICIO
+   ======================================== */
+
+.home-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: center;
+}
+
+.home-screen h2 {
+    font-size: 2.2rem;
+    color: #2d4a33;
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border-bottom: 2px dashed #7d9f7a;
+    padding-bottom: 12px;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    background: #2d3e2a;
+    color: #d4c9b5;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 3px solid #b8a48b;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+footer span {
+    color: #b8a48b;
+}
+
+/* ========================================
+   BOTÓN FLOTANTE DE VOLVER
+   ======================================== */
+
+.btn-flotante-volver {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #2d4a33;
+    color: #f5f0e1;
+    border: 3px solid #b8a48b;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 30% 30%, #4b6e3f, #2d4228);
+}
+
+.btn-flotante-volver:hover {
+    transform: scale(1.1) rotate(-5deg);
+    background: radial-gradient(circle at 30% 30%, #5a7f4d, #3a5533);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.btn-flotante-volver:active {
+    transform: scale(0.9);
+}
+
+.btn-flotante-volver::after {
+    content: "Volver al inicio";
+    position: absolute;
+    right: 75px;
+    background: #2d3e2a;
+    color: #f5f0e1;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.3s ease;
+    border: 1px solid #b8a48b;
+}
+
+.btn-flotante-volver:hover::after {
+    opacity: 1;
+    right: 80px;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .home-screen h2 {
+        font-size: 1.6rem;
+    }
+    
+    .btn-flotante-volver {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+        bottom: 20px;
+        right: 20px;
+    }
+    .btn-flotante-volver::after {
+        display: none;
+    }
+}
